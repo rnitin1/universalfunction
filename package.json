@@ -1,0 +1,16 @@
+{
+  "name": "universalfunction",
+  "version": "1.0.4",
+  "description": "The Universalfunction library exported as Node.js modules. Installation",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nitin",
+  "license": "MIT"
+}
