@@ -143,29 +143,37 @@ Installation Using npm:
 
 //Database Queries
 
-    //Get Users from DB
-    exports.getData = (criteria, projection, options, callback) =>{
+//Get Users from DB
+//Usage 
+
+    getData = (criteria, projection, options, callback) =>{
         Model.find(criteria, projection, options, callback);
     };
 
-    //Insert User in DB
-    exports.create = (objToSave, callback)=> {
+//Insert User in DB
+//usage
+
+    create = (objToSave, callback)=> {
         new Models(objToSave).save(callback)
     };
 
-    //Update price in DB
-    exports.findAndUpdate = (criteria, dataToSet, options, callback)=> {
+//Update User in DB
+//Usage
+    //For updating one entry
+    findAndUpdate = (criteria, dataToSet, options, callback)=> {
         Model.findOneAndUpdate(criteria, dataToSet, options, callback);
     };
 
-
-    exports.updateMultiple = (criteria, dataToSet, options, callback) =>{
+    //for Updating multiple enteries
+    updateMultiple = (criteria, dataToSet, options, callback) =>{
         Model.update(criteria, dataToSet, options, callback);
     };
 
 
+// Populate from db
+//Usage
 
-    exports.getPopulate = (criteria, project, options,populateArray, callback)=> {
+    getPopulate = (criteria, project, options,populateArray, callback)=> {
         Model.find(criteria, project, options).populate(populateArray).exec(function (err, docs) {
             if (err) {
                 return callback(err, docs);
@@ -175,7 +183,15 @@ Installation Using npm:
         });
     };
 
+// delete entry from db
+//Usage
+
     // for deleting the single entry
-    exports.deleteData=(criteria,callback)=>{
+    deleteData=(criteria,callback)=>{
         Model.deleteOne(criteria,callback)
+    }
+
+    // for deleting the multiple entries
+    deleteData=(criteria,callback)=>{
+        Model.delete(criteria,callback)
     }
