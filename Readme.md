@@ -3,14 +3,11 @@ The Universalfunction library exported as Node.js modules.
 
 Installation Using npm:
 
-$ npm i  universalfunction
-
-In Node.js:
+    $ npm i  universalfunction
 
 // Load the full build.
 
-
-var universalfunction = require('universalfunction');
+    var universalfunction = require('universalfunction');
 
 
 
@@ -23,7 +20,7 @@ var universalfunction = require('universalfunction');
 
 //Sending notification to users 
 //installation
-npm install fcm-node
+    npm install fcm-node
 
 //Usage
 
@@ -60,14 +57,15 @@ npm install fcm-node
 //Authentication with passport
 
 //Installation
-npm i passport
+    npm i passport
 
 //load passport
-const passport = require('passport')
+    const passport = require('passport')
 
-isAuthenticated()  //checks whether user authenticated or not
+    isAuthenticated()  //checks whether user authenticated or not
 
 //usage
+
     checkAuthenticate=(req,res,next)=> {
         if(req.isAuthenticated()){
             return next()
@@ -98,5 +96,4 @@ isAuthenticated()  //checks whether user authenticated or not
         done(err,token)
     })
     }  //4a22
-
-//Number=2 and this then this number is converted into hexadecimal string
+    //Number=2 and this then this number is converted into hexadecimal string
