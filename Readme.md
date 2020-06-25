@@ -14,12 +14,13 @@ Installation Using npm:
 
 
 
-//Documentation
+                                Documentation
 
 
 
 //Sending notification to users 
 //installation
+
     npm install fcm-node
 
 //Usage
@@ -57,6 +58,7 @@ Installation Using npm:
 //Authentication with passport
 
 //Installation
+
     npm i passport
 
 //load passport
