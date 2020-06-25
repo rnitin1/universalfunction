@@ -68,43 +68,35 @@ const passport = require('passport')
 isAuthenticated()  //checks whether user authenticated or not
 
 //usage
-checkAuthenticate=(req,res,next)=> {
-
-    if(req.isAuthenticated()){
-
-        return next()
-
-    }else{
-
-        return res.send('login first')
-
-    }
-}//If user is authenticated(logged in) then passes to the next else returns back to login page
+    checkAuthenticate=(req,res,next)=> {
+        if(req.isAuthenticated()){
+            return next()
+        }else{
+            return res.send('login first')
+        }
+    }//If user is authenticated(logged in) then passes to the next else returns back to login page
 
 
 
 // for generating randon bytes with crypto
 
 //Installation
-npm i crypto
+    npm i crypto
 
 //load crypto
-const crypto = require('crypto');
+    const crypto = require('crypto');
 
 
-crypto.randomBytes(Number,callback)//creates the random bytes
+    crypto.randomBytes(Number,callback)//creates the random bytes
 
 
 //usage
-tokenGenrator= (done)=>{
 
-    crypto.randomBytes(2,(err,buf)=>{
-
-    let token = buf.toString('hex');
-
-    done(err,token)
-    
-   })
-}  //4a22
+    tokenGenrator= (done)=>{
+        crypto.randomBytes(2,(err,buf)=>{
+        let token = buf.toString('hex');
+        done(err,token)
+    })
+    }  //4a22
 
 //Number=2 and this then this number is converted into hexadecimal string
