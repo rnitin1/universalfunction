@@ -20,7 +20,7 @@ Installation Using npm:
 //Sending notification to users 
 //installation
 
-    npm install fcm-node
+    $ npm install fcm-node
 
 //Usage
 
@@ -58,7 +58,7 @@ Installation Using npm:
 
 //Installation
 
-    npm i passport
+    $ npm i passport
 
 //load passport
 
@@ -82,7 +82,7 @@ Installation Using npm:
 
 //Installation
 
-    npm i crypto
+    $ npm i crypto
 
 //load crypto
 
@@ -194,5 +194,5 @@ Installation Using npm:
 
     // for deleting the multiple entries
     deleteData=(criteria,callback)=>{
-        Model.delete(criteria,callback)
+        Model.deleteMany(criteria,callback)
     }
