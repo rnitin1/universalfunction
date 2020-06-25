@@ -136,3 +136,46 @@ Installation Using npm:
         }
         console.log('Message sent: ' + info.response);
     });
+
+
+
+
+
+//Database Queries
+
+    //Get Users from DB
+    exports.getData = (criteria, projection, options, callback) =>{
+        Model.find(criteria, projection, options, callback);
+    };
+
+    //Insert User in DB
+    exports.create = (objToSave, callback)=> {
+        new Models(objToSave).save(callback)
+    };
+
+    //Update price in DB
+    exports.findAndUpdate = (criteria, dataToSet, options, callback)=> {
+        Model.findOneAndUpdate(criteria, dataToSet, options, callback);
+    };
+
+
+    exports.updateMultiple = (criteria, dataToSet, options, callback) =>{
+        Model.update(criteria, dataToSet, options, callback);
+    };
+
+
+
+    exports.getPopulate = (criteria, project, options,populateArray, callback)=> {
+        Model.find(criteria, project, options).populate(populateArray).exec(function (err, docs) {
+            if (err) {
+                return callback(err, docs);
+            }else{
+                callback(null, docs);
+            }
+        });
+    };
+
+    // for deleting the single entry
+    exports.deleteData=(criteria,callback)=>{
+        Model.deleteOne(criteria,callback)
+    }
