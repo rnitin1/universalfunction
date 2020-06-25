@@ -144,6 +144,7 @@ Installation Using npm:
 //Database Queries
 
 //Get Users from DB
+
 //Usage 
 
     getData = (criteria, projection, options, callback) =>{
@@ -151,6 +152,7 @@ Installation Using npm:
     };
 
 //Insert User in DB
+
 //usage
 
     create = (objToSave, callback)=> {
@@ -158,7 +160,9 @@ Installation Using npm:
     };
 
 //Update User in DB
+
 //Usage
+
     //For updating one entry
     findAndUpdate = (criteria, dataToSet, options, callback)=> {
         Model.findOneAndUpdate(criteria, dataToSet, options, callback);
@@ -171,6 +175,7 @@ Installation Using npm:
 
 
 // Populate from db
+
 //Usage
 
     getPopulate = (criteria, project, options,populateArray, callback)=> {
@@ -184,6 +189,7 @@ Installation Using npm:
     };
 
 // delete entry from db
+
 //Usage
 
     // for deleting the single entry
