@@ -13,8 +13,7 @@ Installation Using npm:
 
 
 
-
-                                Documentation
+//Documentation
 
 
 
@@ -62,6 +61,7 @@ Installation Using npm:
     npm i passport
 
 //load passport
+
     const passport = require('passport')
 
     isAuthenticated()  //checks whether user authenticated or not
@@ -81,9 +81,11 @@ Installation Using npm:
 // for generating randon bytes with crypto
 
 //Installation
+
     npm i crypto
 
 //load crypto
+
     const crypto = require('crypto');
 
 
