@@ -1,6 +1,6 @@
 {
   "name": "universalfunction",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "The Universalfunction library exported as Node.js modules. Installation",
   "main": "server.js",
   "repository": {
