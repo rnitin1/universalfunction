@@ -101,3 +101,38 @@ Installation Using npm:
     })
     }  //4a22
     //Number=2 and this then this number is converted into hexadecimal string
+
+
+
+
+//Sending mail to the user with nodemailer
+//installation
+
+    $ npm i nodemailer
+
+//load nodemailer
+
+    const nodemailer = require("nodemailer")
+
+//usage
+
+    const nodemailer = require('nodemailer');
+
+    // create reusable transporter object using the default SMTP transport
+    var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+
+    // setup e-mail data with unicode symbols
+    var mailOptions = {
+        from: '"" <xyz@abc.com>', // sender address
+        to: 'name@domain.com, baz@blurdybloop.com', // list of receivers
+        subject: 'Hello ', // Subject line
+        text: 'Hello world ', // plaintext body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+    });

@@ -62,24 +62,24 @@ exports.tokenGenrator= (done)=>{
 }
 
 //for sending OTP
-// exports.nodemailerForOtp=(token,req,res)=>{
-//     const smtpTransport=nodemailer.createTransport({
-//         service:'Gmail',
-//         auth:{
-//             user:'nitinrana000111@gmail.com',
-//             pass:process.env.GMAILPW
-//         }
-//     })
-//     const mailOptions={
-//         to:req.body.email,
-//         from:'nitinrana000111@gmail.com',
-//         subject:'OTP for Email verifiction',
-//         text:'OTP : '+ token
-//     }
-//     smtpTransport.sendMail(mailOptions,(err)=>{
-//         res.send('OTP sent');
-//     })
-// }
+exports.nodemailerForOtp=(token,req,res)=>{
+    const smtpTransport=nodemailer.createTransport({
+        service:'Gmail',
+        auth:{
+            user:'nitinrana000111@gmail.com',
+            pass:process.env.GMAILPW
+        }
+    })
+    const mailOptions={      
+        to:req.body.email,
+        from:'nitinrana000111@gmail.com',
+        subject:'OTP for Email verifiction',
+        text:'OTP : '+ token
+    }
+    smtpTransport.sendMail(mailOptions,(err)=>{
+        res.send('OTP sent');
+    })
+}
 
 //Get Users from DB
 exports.getData = (criteria, projection, options, callback) =>{
